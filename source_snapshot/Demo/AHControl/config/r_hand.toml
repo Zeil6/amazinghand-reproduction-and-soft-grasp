@@ -1,0 +1,116 @@
+# Modified from Pollen Robotics AmazingHand (Apache-2.0).
+# Local changes add limits, shutdown behavior, and experimental soft-grasp settings.
+
+# Config for the right index finger1
+shutdown_action = "hold"
+
+[Fingers]
+[[motors]]
+finger_name="finger1"
+motor1.id = 1
+motor1.offset = 0.12217304763960307
+motor1.invert = false
+motor1.model = "SCS0009"
+motor1.min_position_rad = -1.5707963267948966
+motor1.max_position_rad = 1.5707963267948966
+motor2.id = 2
+motor2.offset = 0.08726646259971647
+motor2.invert = false
+motor2.model = "SCS0009"
+motor2.min_position_rad = -1.5707963267948966
+motor2.max_position_rad = 1.5707963267948966
+[[motors]]
+finger_name="finger2"
+motor1.id = 3
+motor1.offset = 0.0
+motor1.invert = false
+motor1.model = "SCS0009"
+motor1.min_position_rad = -1.5707963267948966
+motor1.max_position_rad = 1.5707963267948966
+motor2.id = 4
+motor2.offset = 0.12217304763960307
+motor2.invert = false
+motor2.model = "SCS0009"
+motor2.min_position_rad = -1.5707963267948966
+motor2.max_position_rad = 1.5707963267948966
+[[motors]]
+finger_name="finger3"
+motor1.id = 5
+motor1.offset = 0.08726646259971647
+motor1.invert = false
+motor1.model = "SCS0009"
+motor1.min_position_rad = -1.5707963267948966
+motor1.max_position_rad = 1.5707963267948966
+motor2.id = 6
+motor2.offset = 0.12217304763960307
+motor2.invert = false
+motor2.model = "SCS0009"
+motor2.min_position_rad = -1.5707963267948966
+motor2.max_position_rad = 1.5707963267948966
+[[motors]]
+finger_name="finger4"
+motor1.id = 7
+motor1.offset = 0.0
+motor1.invert = true
+motor1.model = "SCS0009"
+motor1.min_position_rad = -1.5707963267948966
+motor1.max_position_rad = 1.5707963267948966
+motor2.id = 8
+motor2.offset = 0.12217304763960307
+motor2.invert = false
+motor2.model = "SCS0009"
+motor2.min_position_rad = -1.5707963267948966
+motor2.max_position_rad = 1.5707963267948966
+
+[soft_grasp]
+# Disabled by default: these raw-load thresholds are safe starting placeholders, not calibrated values.
+enabled = false
+feedback_hz = 10
+command_hz = 100
+goal_speed_rad_s = 1.0
+load_filter_alpha = 0.2
+contact_confirm_samples = 5
+release_confirm_samples = 3
+max_position_step_rad = 0.01
+hold_deadband = 20
+communication_timeout_ms = 200
+baseline_samples = 25
+max_temperature_c = 60
+min_voltage_v = 4.5
+max_voltage_v = 7.2
+# SCS0009 register 62 is commonly reported in 0.1 V units; verify on the actual bus.
+voltage_scale_v_per_raw = 0.1
+fault_action = "hold"
+fault_backoff_rad = 0.02
+
+[[soft_grasp.fingers]]
+name = "finger1"
+contact_load_threshold = 180
+target_hold_load = 220
+max_load = 450
+closing_sign_motor1 = 1.0
+closing_sign_motor2 = -1.0
+
+[[soft_grasp.fingers]]
+name = "finger2"
+contact_load_threshold = 180
+target_hold_load = 220
+max_load = 450
+closing_sign_motor1 = 1.0
+closing_sign_motor2 = -1.0
+
+[[soft_grasp.fingers]]
+name = "finger3"
+contact_load_threshold = 180
+target_hold_load = 220
+max_load = 450
+closing_sign_motor1 = 1.0
+closing_sign_motor2 = -1.0
+
+[[soft_grasp.fingers]]
+name = "finger4"
+contact_load_threshold = 180
+target_hold_load = 220
+max_load = 450
+closing_sign_motor1 = 1.0
+closing_sign_motor2 = -1.0
