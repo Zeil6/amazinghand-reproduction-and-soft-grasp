@@ -8,6 +8,14 @@
 
 <p align="center"><sub>手势识别与连续动作跟踪演示（点击 GIF 查看 MP4 清晰版）</sub></p>
 
+<p align="center">
+  <a href="assets/videos/amazinghand_hardware_motion_demo.mp4">
+    <img src="assets/images/amazinghand_hardware_motion_demo.gif" alt="AmazingHand 真机连续动作演示" width="420">
+  </a>
+</p>
+
+<p align="center"><sub>AmazingHand 真机连续动作演示（点击 GIF 查看 MP4 清晰版）</sub></p>
+
 这个仓库记录我复现 [Pollen Robotics AmazingHand](https://github.com/pollen-robotics/AmazingHand) 的过程，以及在原有位置跟踪链路上尝试加入 SCS0009 舵机负载反馈的开发记录。
 
 它不是一份“已经完成全部验证”的成品说明。仓库保留我遇到的依赖问题、运行故障、判断修正和当前仍未完成的硬件标定。
