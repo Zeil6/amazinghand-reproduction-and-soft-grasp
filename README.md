@@ -1,12 +1,20 @@
 # AmazingHand 复现与负载反馈软抓取记录
 
+<p align="center">
+  <a href="assets/videos/gesture_tracking_demo.mp4">
+    <img src="assets/images/gesture_tracking_demo.gif" alt="AmazingHand 手势识别与连续动作跟踪演示" width="600">
+  </a>
+</p>
+
+<p align="center"><sub>手势识别与连续动作跟踪演示（点击 GIF 查看 MP4 清晰版）</sub></p>
+
 这个仓库记录我复现 [Pollen Robotics AmazingHand](https://github.com/pollen-robotics/AmazingHand) 的过程，以及在原有位置跟踪链路上尝试加入 SCS0009 舵机负载反馈的开发记录。
 
 它不是一份“已经完成全部验证”的成品说明。仓库保留我遇到的依赖问题、运行故障、判断修正和当前仍未完成的硬件标定。
 
-## 手势识别演示视频
+## 演示说明
 
-[点击查看手势识别演示视频](assets/videos/gesture_tracking_demo.mp4)
+[点击查看手势识别演示视频的 MP4 清晰版](assets/videos/gesture_tracking_demo.mp4)
 
 这是 AmazingHand 手势识别与连续动作跟踪的演示视频。画面同时展示了相机手部关键点跟踪、MuJoCo 手模型和真机机械手的同步运动，用于记录原项目链路的实际运行效果。
 
