@@ -30,6 +30,13 @@ flowchart TD
 
 ## 视频对照
 
+| 原版位置跟踪 | 加入负载反馈软抓取 |
+| :---: | :---: |
+| [![原版位置跟踪演示](assets/images/original_position_tracking.gif)](assets/videos/original_position_tracking.mp4) | [![负载反馈软抓取演示](assets/images/load_feedback_soft_grasp.gif)](assets/videos/load_feedback_soft_grasp.mp4) |
+| 点击 GIF 查看 MP4 清晰版 | 点击 GIF 查看 MP4 清晰版 |
+
+两段 GIF 保留了各自视频的完整过程，并统一为相同尺寸和帧率，方便并排观察。原视频时长不同，因此两侧循环不会始终逐帧同步。
+
 | 对照项 | 原版位置跟踪 | 加入负载反馈软抓取 |
 | --- | --- | --- |
 | 控制依据 | 目标位置 | 目标位置 + 舵机负载反馈 |
@@ -82,4 +89,3 @@ max_load = 450
 7. [代码来源与修改说明](SOURCE_PROVENANCE.md)
 
 [返回 `main`](https://github.com/Zeil6/amazinghand-reproduction-and-soft-grasp)
-
